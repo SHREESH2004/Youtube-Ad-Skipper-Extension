@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdClear for YouTube</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AdClear</h1>
+    <p>Enjoy an ad-free YouTube experience!</p>
+    <button id="refresh">Refresh YouTube</button>
+  </div>
+  <script>
+    document.getElementById('refresh').addEventListener('click', () => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.reload(tabs[0].id);
+      });
+    });
+  </script>
+</body>
+</html>

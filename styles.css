@@ -1,0 +1,7 @@
+/* Highlight skip button */
+.ytp-ad-skip-button {
+    border: 2px solid red !important;
+    background-color: yellow !important;
+    color: black !important;
+  }
+  
